@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue First App</title>
+</head>
+
+<body>
+
+
+    <div id="exercise">
+
+        <!-- 1-) Interpolation yani {{}} Syntax'ını kullanarak <p> elementinin içeriğini Name ve Age verileriyle doldurunuz. -->
+
+        <p>VueJS Muazzam Bir Framework - {{name}} ({{age}})</p>
+
+        <!-- 2-) Yaşınızı 5 ile çarpıp <p> içerisine yazdırınız. -->
+
+        <p>Age * 5 => <b>{{multiplacationAge()}}</b></p>
+
+        <!-- 3-) Fonksiyon çağırarak 0 ile 1 arasında bir sayı üretip <p> içerisinde yazdırınız. (Math.random())  -->
+
+
+        <p>0 ile 1 arasında Rastgele bir Sayı => <b>{{produceRandomNum()}}</b></p>
+
+
+        <!-- 4-) Google üzerinden bulacağınız herhangi bir fotoğrafı <img> elementinde gösterme işlemini yapınız.
+        bunu yaparken "src" attribute'una bind etmeyi unutmayınız.-->
+
+        <img style="width: 50px;" v-bind:src="photoLink" v-bind:title="photoDescription">
+
+
+        <!-- 5-) Name değişkeninin değerini <input/> içine yazdığınız değer ile anlık olarak değiştirilmesini sağlayınız 
+            ("value" attribute kullanarak) -->
+
+        <div>
+            <input type="text" v-on:input="catchName" v-bind:value="name">
+        </div>
+
+
+    </div>
+
+
+</body>
+
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<script src="index.js"></script>
+
+
+
+</html>
